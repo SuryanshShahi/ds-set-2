@@ -1,0 +1,8 @@
+-- import: fastn
+
+-- fastn.package: fifthtry.github.io/ds-set-2
+download-base-url: https://raw.githubusercontent.com/fifthtry/ds-set-2/main
+
+-- fastn.dependency: fifthtry.github.io/doc-site as ds
+
+-- fastn.auto-import: ds
