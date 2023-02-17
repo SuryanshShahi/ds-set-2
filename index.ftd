@@ -1,57 +1,126 @@
 -- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-2/lib as lp
+
+-- lp.page:
 
 
 
--- ds.page: Welcome to your [FASTN site](https://fastn.dev/)
-
-FASTN Blank Package Template Repo
-
-🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
-
-
---- ds.image: doc-site
-src: $assets.files.doc-site-example.png
-width: fill
-
-
---- ds.h1: 🚀 Project Structure
-
-Inside of your FASTN project, you'll see the following folders and files:
-
-
---- ds.code:
-lang:
-
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FASTN.ftd
-├── index.ftd
-└── README.md
 
 
 
---- ds.h1: 🧞 Commands
+-- lp.hero-section: We transform ideas into digital outcomes.
+image: $assets.files.assets.hero.svg
 
-All commands are run from the root of the project, from a terminal:
-
---- ds.code:
-lang:
-
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fastn build              | FASTN builder installs all `FASTN` dependencies|
-| fastn serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
 
 
---- ds.h1: 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fastn.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
+
+
+
+
+-- lp.clients-container: Trusted by the top companies in this industry
+list-of-clients: $list-of-clients
+
+The only SaaS business platform that combines CRM, marketing automation & commerce.
+
+
+
+
+
+
+
+
+-- lp.generation: Built for the next generation of small business
+src: $assets.files.assets.generation.png
+width: 1440
+
+Fastn is an all-in-one payments platform where businesses can connect, transact, and grow together.
+
+-- end: lp.generation
+
+
+
+
+
+
+
+
+-- lp.promo-banner: Create
+src: $assets.files.assets.create.svg
+cta-label: Sign me up
+width: 1440
+
+Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.
+
+-- end: lp.promo-banner
+
+
+
+-- lp.promo-banner: Engage
+src: $assets.files.assets.engage.svg
+cta-label: Sign me up
+width: 1440
+img-order-left: false
+padding-left: 165
+padding-right: 125
+
+Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.
+
+-- end: lp.promo-banner
+
+
+
+-- lp.promo-banner: Analyze
+src: $assets.files.assets.analyze.svg
+cta-label: Sign me up
+width: 1440
+
+Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.
+
+-- end: lp.promo-banner
+
+
+
+
+
+
+
+
+-- lp.experiences: Experiences
+src1: $assets.files.assets.generation.png
+src2: $assets.files.assets.experiences.png
+width: 1440
+;;height: 780
+
+Lorem ipsum dolor sit amet
+
+
+
+
+
+
+
+-- end: lp.page
+
+
+
+
+
+
+-- $lp.clients-record list list-of-clients:
+
+-- $lp.clients-record: 
+src: $assets.files.assets.symtric.svg
+
+-- $lp.clients-record: 
+src: $assets.files.assets.jiggle.svg
+
+-- $lp.clients-record: 
+src: $assets.files.assets.resecrub.svg
+
+-- $lp.clients-record: 
+src: $assets.files.assets.wishelp.svg
+
+-- end: list-of-clients

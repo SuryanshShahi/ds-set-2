@@ -6,3 +6,20 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/ds-set-2/main
 -- fastn.dependency: fifthtry.github.io/doc-site as ds
 
 -- fastn.auto-import: ds
+
+-- fastn.dependency: fifthtry.github.io/sailing-shark-cs as shark
+
+-- fastn.auto-import: shark
+
+-- fastn.dependency: fifthtry.github.io/sailing-shark-typography as tf
+
+-- fastn.auto-import: tf
+
+
+-- fastn.sitemap:
+
+# label: /
+# label: /
+# label: /
+# label: /
+# label: /
