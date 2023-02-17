@@ -1,0 +1,627 @@
+-- import: fastn
+-- import: fastn/processors as pr
+-- import: fifthtry.github.io/sailing-shark-cs as shark
+-- import: fifthtry.github.io/sailing-shark-typography as tf
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.sitemap
+
+
+-- integer $width: 1180
+
+
+
+
+
+
+-- component logo-card:
+optional caption title: 
+ftd.image-src logo:
+
+-- ftd.row:
+width.fixed.px: 261
+height.fixed.px: 146
+background.solid: $inherited.colors.background.base
+align-content: center
+border-radius.px: 10
+spacing.fixed.px: 13
+
+-- ftd.image: 
+src: $logo-card.logo
+
+-- ftd.text: $logo-card.title
+if: { logo-card.title != NULL }
+
+-- end: ftd.row
+
+-- end: logo-card
+
+
+
+
+
+
+
+
+
+
+
+-- component page:
+string site-name: fastn
+optional ftd.image-src logo:
+string site-url: / 
+optional caption title:
+optional body body:
+ftd.color-scheme colors: $shark.main
+ftd.type-data types: $tf.types
+pr.toc-item list sections: $sitemap.sections
+children wrapper:
+
+-- ftd.column: 
+width: fill-container
+background.solid: $inherited.colors.background.base
+
+-- ftd.row:
+padding.px: 20
+width: fill-container
+spacing: space-between
+
+
+-- ftd.text: $page.site-name
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+
+-- ftd.row:
+align-content: center
+spacing.fixed.px: 10
+
+-- section-loop: $obj.title
+$loop$: $page.sections as $obj
+url: $obj.url
+is-active: $obj.is-active
+
+-- end: ftd.row
+
+-- cta-button: PRIMARY
+role: primary
+link: /
+border-radius: 4 
+;;text-color: $inherited.colors.background.base
+
+-- end: ftd.row
+
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+children: $page.wrapper
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+-- component section-loop:
+caption title:
+string url:
+boolean is-active:
+
+-- ftd.column:
+
+-- ftd.text: $section-loop.title
+role: $inherited.types.copy-regular
+link: $section-loop.url
+color: $inherited.colors.border
+color if { section-loop.is-active }: $inherited.colors.text
+
+-- end: ftd.column
+
+
+-- end: section-loop
+
+
+
+
+
+
+
+
+
+-- component cta-button:
+caption title:
+optional string role:
+integer border-radius: 0
+optional string link: /
+optional boolean medium: false
+boolean show-arrow: false
+optional ftd.image-src cta-icon: 
+optional integer width:
+boolean align-center: false
+integer padding-vertical: 10
+integer padding-horizontal: 28
+boolean transparent: false
+integer border-width: 1
+optional ftd.image-src src: 
+
+-- ftd.column:
+align-self if { cta-button.align-center }: center
+
+-- ftd.row:
+if: {!cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+border-radius.px: $cta-button.border-radius
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-medium
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.src != NULL }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- ftd.row:
+if: {cta-button.medium}
+width.fixed.px if { cta-button.width != NULL}: $cta-button.width
+spacing.fixed.px: 10
+link if { cta-button.link != NULL }: $cta-button.link
+background.solid if { cta-button.role == "primary" }: $inherited.colors.cta-primary.base
+background.solid if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.base
+border-radius.px: 30
+padding-vertical.px: $cta-button.padding-vertical
+padding-horizontal.px: $cta-button.padding-horizontal
+align-content: center
+
+-- ftd.text: $cta-button.title
+role: $inherited.types.button-small
+color if { cta-button.role == "secondary" }: $inherited.colors.cta-secondary.text
+color if { cta-button.role == "primary" }: $inherited.colors.cta-primary.text
+white-space: nowrap
+text-align: center
+
+-- ftd.image:
+if: { cta-button.show-arrow }
+src: $cta-button.src
+width: auto
+height: auto
+align-self: center
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: cta-button
+
+
+
+
+
+
+
+
+
+
+-- component promo-banner-info:
+caption title:
+string cta-label:
+body info:
+integer padding-left:  
+integer padding-right:  
+
+-- ftd.column:
+width: fill-container
+align-self: center
+padding-left.px: $promo-banner-info.padding-left
+padding-right.px: $promo-banner-info.padding-right
+
+-- ftd.text: $promo-banner-info.title
+color: $inherited.colors.text
+role: $inherited.types.heading-medium
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 32
+margin-bottom.px: 40
+
+$promo-banner-info.info
+
+-- ftd.column:
+
+-- cta-button: $promo-banner-info.cta-label
+role: primary
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: promo-banner-info
+
+
+
+
+
+
+
+
+
+
+-- component promo-banner:
+caption title:
+boolean img-order-left: true
+body info:
+ftd.image-src src:
+string cta-label: Sign me up
+string cta-url: /
+ftd.color bg-color: $inherited.colors.background.base
+children promo-banner-wrap:
+optional integer padding-vertical: 0
+optional integer padding-horizontal: 0
+integer width: $width
+optional integer padding-left: 125
+optional integer padding-right: 125
+
+-- ftd.column:
+width: fill-container
+align-content: center
+padding-top.px: 66
+padding-bottom.px: 33
+
+-- ftd.row:
+if: { promo-banner.img-order-left }
+background.solid: $promo-banner.bg-color
+padding-vertical.px: $promo-banner.padding-vertical
+border-radius.px: 20
+padding-horizontal.px: $promo-banner.padding-horizontal
+width: fill-container
+max-width.fixed.px: $promo-banner.width
+align-self: center
+
+-- ftd.image:
+src: $promo-banner.src
+
+-- promo-banner-info: $promo-banner.title
+cta-label: $promo-banner.cta-label
+padding-left: $promo-banner.padding-left
+padding-right: $promo-banner.padding-right
+
+$promo-banner.info
+
+-- end: promo-banner-info
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { !promo-banner.img-order-left }
+background.solid : $promo-banner.bg-color
+padding-vertical.px: $promo-banner.padding-vertical
+border-radius.px: 20
+padding-horizontal.px: $promo-banner.padding-horizontal
+width: fill-container
+max-width.fixed.px: $promo-banner.width
+align-self: center
+
+-- promo-banner-info: $promo-banner.title
+cta-label: $promo-banner.cta-label
+padding-left: $promo-banner.padding-left
+padding-right: $promo-banner.padding-right
+
+$promo-banner.info
+
+-- end: promo-banner-info
+
+-- ftd.image:
+src: $promo-banner.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: promo-banner
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component hero-section:
+caption title:
+body body:
+ftd.image-src image:
+optional string cta-left-text: Demo
+optional string cta-left-url: /
+optional string cta-right-text: How it works
+optional string cta-right-url: /
+
+-- ftd.column: 
+width: fill-container
+spacing.fixed.px: 50
+
+-- ftd.text: $hero-section.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+text-align: center
+width: fill-container
+
+-- ftd.text: 
+text: $hero-section.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.border
+text-align: center
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+align-content: center
+padding.px: 20
+spacing.fixed.px: 10
+
+-- cta-button: $hero-section.cta-left-text
+role: primary
+link: $hero-section.cta-left-url
+;;text-color: $inherited.colors.background.base
+
+
+-- cta-button: $hero-section.cta-right-text
+link: $hero-section.cta-right-url
+role: primary
+;;text-color: $inherited.colors.cta-primary.base
+
+-- end: ftd.row
+
+-- ftd.image:
+src: $hero-section.image
+width: fill-container
+height: auto
+
+-- end: ftd.column
+
+-- end: hero-section
+
+
+
+
+
+
+
+
+
+
+
+
+-- component clients-container:
+caption title:
+body body:
+clients-record list list-of-clients:
+integer width: $width
+
+-- ftd.column:
+background.solid: $inherited.colors.background.step-1
+width: fill-container
+align-content: center
+padding-top.px: 70
+padding-bottom.px: 70
+spacing.fixed.px: 150
+
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 150
+max-width.fixed.px: $clients-container.width
+
+-- ftd.column:
+
+-- ftd.text: $clients-container.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text: 
+color: $inherited.colors.border
+role: $inherited.types.copy-regular
+
+$clients-container.body
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.row: 
+spacing.fixed.px: 30
+wrap: true
+
+-- client-card:
+$loop$: $clients-container.list-of-clients as $client
+src: $client.src
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: clients-container
+
+
+
+
+
+
+
+
+
+-- component client-card:
+ftd.image-src src:
+
+-- ftd.column:
+background.solid: $inherited.colors.background.base
+padding.px: 30
+border-radius.px: 10
+
+-- ftd.image:
+src: $client-card.src
+width.fixed.px: 154 
+
+-- end: ftd.column
+
+-- end: client-card
+
+
+
+
+
+
+-- record clients-record:
+ftd.image-src src: 
+
+
+
+
+
+
+
+
+
+
+
+-- component generation:
+caption title:
+ftd.image-src src:
+body body:
+integer width: $width
+
+
+-- ftd.column:
+align-content: center
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $generation.width 
+
+-- ftd.column:
+margin-top.px: -140
+
+-- ftd.image: 
+src: $generation.src
+
+-- end: ftd.column
+
+-- ftd.column:
+anchor: parent
+padding-vertical.px: 100
+padding-left.px: 165
+
+-- ftd.text: $generation.title
+width.fixed.percent: 65
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text: $generation.body
+width.fixed.percent: 70
+color: $inherited.colors.border
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: generation
+
+
+
+
+
+
+
+
+-- component experiences:
+caption title:
+body body:
+ftd.image-src src1:
+ftd.image-src src2:
+integer width: $width
+;;integer height: $height
+integer padding-horizontal: 100
+
+-- ftd.column:
+align-content: center
+width: fill-container
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $experiences.width 
+
+-- ftd.column:
+anchor: parent
+margin-top.px: -140
+right.px: -180
+
+-- ftd.image: 
+src: $experiences.src1
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.text: $experiences.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text: $experiences.body
+color: $inherited.colors.border
+role: $inherited.types.copy-regular
+
+
+-- ftd.image:
+src: $experiences.src2
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: experiences
