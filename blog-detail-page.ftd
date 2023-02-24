@@ -1,0 +1,188 @@
+-- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-2/lib as lp
+
+
+-- lp.page:
+cta-label: PRIMARY
+brand-name: Fastn
+
+
+
+
+-- lp.breadcrums: Breadcrums
+arrow: $assets.files.assets.arrowRight.png
+
+
+
+
+-- lp.blog-heading: Bringing the world together through live experiences.
+width: 1049
+author: Patrica AVA
+author-profile: UI Designer
+author-icon: $assets.files.assets.user.png
+img-left: $assets.files.assets.blog-left-img.png
+img-right: $assets.files.assets.blog-right-img.png
+
+
+
+
+-- lp.blog-content: Bringing the world together through live experiences.
+width: 1049
+question: Where does technology exploit our minds’ weaknesses?
+solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+blog-img: $assets.files.assets.blog1.png
+img-label: Bringing the world together through live experiences.
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+
+
+
+-- lp.blog-content: Bringing the world together through live experiences.
+width: 1049
+solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+blog-img: $assets.files.assets.blog2.png
+img-label: Bringing the world together through live experiences.
+description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+
+
+
+-- lp.blog-content: 
+width: 1049
+blog-img: $assets.files.assets.blog3.png
+img-label: Bringing the world together through live experiences.
+
+
+
+
+-- lp.blog-content: Bringing the world together through live experiences.
+width: 1049
+solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+blog-img: $assets.files.assets.blog4.png
+img-label: Bringing the world together through live experiences.
+description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+
+
+-- lp.blog-content: Bringing the world together through live experiences.
+width: 1049
+solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+blog-img: $assets.files.assets.blog5.png
+img-label: Bringing the world together through live experiences.
+description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+img-title: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, 
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+
+
+
+-- lp.blog-content: Bringing the world together through live experiences.
+width: 1049
+description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+
+
+
+-- lp.blog-content: Bringing the world together through live experiences.
+width: 1049
+description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+
+
+
+
+
+-- lp.footer: Fastn
+list-of-footer-logo: $list-of-footer-logo
+bg-color: $inherited.colors.background.code
+
+Copyright ©2022. Fastn Inc.
+
+-- lp.footer-links-wrapper:
+
+-- lp.footer-links: HEADING
+link1: footer-link1
+link2: footer-link2
+link3: footer-link3
+link4: footer-link4
+link5: footer-link5
+footer-color: $inherited.colors.cta-danger.text
+
+-- lp.footer-links: HEADING
+link1: footer-link1
+link2: footer-link2
+link3: footer-link3
+link4: footer-link4
+link5: footer-link5
+footer-color: $inherited.colors.cta-danger.text
+
+-- lp.footer-links: HEADING
+link1: footer-link1
+link2: footer-link2
+link3: footer-link3
+link4: footer-link4
+link5: footer-link5
+footer-color: $inherited.colors.cta-danger.text
+
+-- lp.footer-links: HEADING
+link1: footer-link1
+link2: footer-link2
+link3: footer-link3
+link4: footer-link4
+link5: footer-link5
+footer-color: $inherited.colors.cta-danger.text
+
+-- end: lp.footer-links-wrapper
+
+-- end: lp.footer
+
+
+
+
+
+-- end: lp.page
+
+
+
+
+
+
+
+
+
+-- $lp.footer-logo-record list list-of-footer-logo:
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.fb.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.figma.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.google.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.chat.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.social.png
+
+-- end: list-of-footer-logo
+
+

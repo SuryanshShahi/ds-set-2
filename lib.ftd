@@ -1,40 +1,18 @@
 -- import: fastn
 -- import: fastn/processors as pr
--- import: fifthtry.github.io/sailing-shark-cs as shark
--- import: fifthtry.github.io/sailing-shark-typography as tf
+-- import: typo 
+-- import: cs
+
 
 -- pr.sitemap-data sitemap:
 $processor$: pr.sitemap
 
 
+
+
 -- integer $width: 1180
 
 
-
-
-
-
--- component logo-card:
-optional caption title: 
-ftd.image-src logo:
-
--- ftd.row:
-width.fixed.px: 261
-height.fixed.px: 146
-background.solid: $inherited.colors.background.base
-align-content: center
-border-radius.px: 10
-spacing.fixed.px: 13
-
--- ftd.image: 
-src: $logo-card.logo
-
--- ftd.text: $logo-card.title
-if: { logo-card.title != NULL }
-
--- end: ftd.row
-
--- end: logo-card
 
 
 
@@ -47,47 +25,112 @@ if: { logo-card.title != NULL }
 
 
 -- component page:
-string site-name: fastn
-optional ftd.image-src logo:
-string site-url: / 
 optional caption title:
 optional body body:
-ftd.color-scheme colors: $shark.main
-ftd.type-data types: $tf.types
+children page-wrap:
+ftd.type-data types: $typo.types
+ftd.color-scheme colors: $cs.main
 pr.toc-item list sections: $sitemap.sections
-children wrapper:
+optional string cta-placeholder:
+string brand-name:
+string cta-label:
+
+-- ftd.column:
+width: fill-container
+
+-- header: $page.brand-name
+cta-label: $page.cta-label
+
+-- ftd.row:
+if: { page.title != NULL }
+width: fill-container
+spacing: space-between
+padding-horizontal.px: 40
+padding-vertical.px: 50
+background.solid: $inherited.colors.background.base
+
+-- ftd.text: $page.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- ftd.text-input:
+min-width.fixed.px: 375
+placeholder: $page.cta-placeholder
+background.solid: transparent
+border-color: $inherited.colors.cta-primary.base
+border-width.px: 1 
+border-radius.px: 6
+padding.px: 15
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+
+-- ftd.column:
+width: fill-container
+align-content: center
+align-self: center
+children: $page.page-wrap
+background.solid: $inherited.colors.background.base
+
+-- end: ftd.column
+
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+
+
+
+
+
+-- component header:
+caption brand-name: 
+string cta-label:
+pr.toc-item list sections: $sitemap.sections
+integer width: $width
 
 -- ftd.column: 
 width: fill-container
 background.solid: $inherited.colors.background.base
+align-content: center
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 40
+min-height.fixed.px: 112
+align-content: center
+max-width.fixed.px: 1440
 
 -- ftd.row:
-padding.px: 20
 width: fill-container
 spacing: space-between
 
-
--- ftd.text: $page.site-name
-role: $inherited.types.copy-regular
+-- ftd.text: $header.brand-name
+role: $inherited.types.heading-small
 color: $inherited.colors.text
-
 
 -- ftd.row:
 align-content: center
-spacing.fixed.px: 10
+spacing.fixed.px: 32
 
 -- section-loop: $obj.title
-$loop$: $page.sections as $obj
+$loop$: $header.sections as $obj
 url: $obj.url
 is-active: $obj.is-active
 
 -- end: ftd.row
 
--- cta-button: PRIMARY
+-- cta-button: $header.cta-label
 role: primary
 link: /
 border-radius: 4 
-;;text-color: $inherited.colors.background.base
 
 -- end: ftd.row
 
@@ -95,13 +138,22 @@ border-radius: 4
 -- ftd.column:
 width: fill-container
 background.solid: $inherited.colors.background.base
-children: $page.wrapper
+;;children: $header.wrapper
 
 -- end: ftd.column
 
 -- end: ftd.column
 
--- end: page
+-- end: ftd.column
+
+
+-- end: header
+
+
+
+
+
+
 
 
 
@@ -118,13 +170,29 @@ boolean is-active:
 -- ftd.text: $section-loop.title
 role: $inherited.types.copy-regular
 link: $section-loop.url
-color: $inherited.colors.border
+color: $inherited.colors.text
 color if { section-loop.is-active }: $inherited.colors.text
 
 -- end: ftd.column
 
 
 -- end: section-loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -225,9 +293,11 @@ align-self: center
 -- component promo-banner-info:
 caption title:
 string cta-label:
+string cta-url:
 body info:
 integer padding-left:  
 integer padding-right:  
+optional ftd.image-src cta-icon:  
 
 -- ftd.column:
 width: fill-container
@@ -251,6 +321,8 @@ $promo-banner-info.info
 
 -- cta-button: $promo-banner-info.cta-label
 role: primary
+src: $promo-banner-info.cta-icon
+link: $promo-banner-info.cta-url
 
 
 -- end: ftd.column
@@ -270,18 +342,19 @@ role: primary
 
 -- component promo-banner:
 caption title:
+body body:
 boolean img-order-left: true
-body info:
 ftd.image-src src:
-string cta-label: Sign me up
-string cta-url: /
 ftd.color bg-color: $inherited.colors.background.base
+optional ftd.image-src cta-icon:
+string cta-label: 
+string cta-url: /
 children promo-banner-wrap:
 optional integer padding-vertical: 0
 optional integer padding-horizontal: 0
-integer width: $width
 optional integer padding-left: 125
 optional integer padding-right: 125
+integer width: $width
 
 -- ftd.column:
 width: fill-container
@@ -304,10 +377,12 @@ src: $promo-banner.src
 
 -- promo-banner-info: $promo-banner.title
 cta-label: $promo-banner.cta-label
+cta-icon: $promo-banner.cta-icon
+cta-url: $promo-banner.cta-url
 padding-left: $promo-banner.padding-left
 padding-right: $promo-banner.padding-right
 
-$promo-banner.info
+$promo-banner.body
 
 -- end: promo-banner-info
 
@@ -325,10 +400,12 @@ align-self: center
 
 -- promo-banner-info: $promo-banner.title
 cta-label: $promo-banner.cta-label
+cta-icon: $promo-banner.cta-icon
+cta-url: $promo-banner.cta-url
 padding-left: $promo-banner.padding-left
 padding-right: $promo-banner.padding-right
 
-$promo-banner.info
+$promo-banner.body
 
 -- end: promo-banner-info
 
@@ -356,60 +433,63 @@ src: $promo-banner.src
 
 
 
-
-
-
-
-
 -- component hero-section:
 caption title:
 body body:
 ftd.image-src image:
-optional string cta-left-text: Demo
-optional string cta-left-url: /
-optional string cta-right-text: How it works
-optional string cta-right-url: /
+optional string cta-label-left:
+optional string cta-url-left: 
+optional string cta-label-right:
+optional string cta-url-right: 
+integer width: $width
 
 -- ftd.column: 
 width: fill-container
-spacing.fixed.px: 50
+align-content: center
+
+-- ftd.column: 
+width: fill-container
+padding-top.px: 100
+align-content: center
+max-width.fixed.px: $hero-section.width
 
 -- ftd.text: $hero-section.title
 role: $inherited.types.heading-large
 color: $inherited.colors.text
 text-align: center
 width: fill-container
+max-width.fixed.percent: 60
 
 -- ftd.text: 
 text: $hero-section.body
 role: $inherited.types.copy-regular
-color: $inherited.colors.border
+color: $inherited.colors.text
 text-align: center
-width: fill-container
+max-width.fixed.percent: 62
+margin-top.px: 24
 
 -- ftd.row:
 width: fill-container
 align-content: center
-padding.px: 20
+margin-top.px: 40
 spacing.fixed.px: 10
 
--- cta-button: $hero-section.cta-left-text
+-- cta-button: $hero-section.cta-label-left
 role: primary
-link: $hero-section.cta-left-url
-;;text-color: $inherited.colors.background.base
+link: $hero-section.cta-url-left
 
 
--- cta-button: $hero-section.cta-right-text
-link: $hero-section.cta-right-url
+-- cta-button: $hero-section.cta-label-right
+link: $hero-section.cta-url-right
 role: primary
-;;text-color: $inherited.colors.cta-primary.base
 
 -- end: ftd.row
 
 -- ftd.image:
 src: $hero-section.image
-width: fill-container
-height: auto
+margin-top.px: 50
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -428,33 +508,36 @@ height: auto
 
 -- component clients-container:
 caption title:
-body body:
-clients-record list list-of-clients:
+optional body body:
+client-record list list-of-clients:
 integer width: $width
 
 -- ftd.column:
-background.solid: $inherited.colors.background.step-1
 width: fill-container
 align-content: center
-padding-top.px: 70
-padding-bottom.px: 70
-spacing.fixed.px: 150
+background.solid: $inherited.colors.background.step-1
+padding-vertical.px: 70
 
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $clients-container.width
 
 -- ftd.row:
 width: fill-container
-spacing.fixed.px: 150
+spacing.fixed.px: 130
 max-width.fixed.px: $clients-container.width
 
 -- ftd.column:
+align-self: center
 
 -- ftd.text: $clients-container.title
 color: $inherited.colors.text
 role: $inherited.types.heading-large
 
 -- ftd.text: 
-color: $inherited.colors.border
+color: $inherited.colors.text
 role: $inherited.types.copy-regular
+margin-top.px: 17
 
 $clients-container.body
 
@@ -463,7 +546,7 @@ $clients-container.body
 -- ftd.column:
 
 -- ftd.row: 
-spacing.fixed.px: 30
+spacing.fixed.px: 32
 wrap: true
 
 -- client-card:
@@ -475,6 +558,8 @@ src: $client.src
 -- end: ftd.column
 
 -- end: ftd.row
+
+-- end: ftd.column
 
 -- end: ftd.column
 
@@ -493,12 +578,15 @@ ftd.image-src src:
 
 -- ftd.column:
 background.solid: $inherited.colors.background.base
-padding.px: 30
 border-radius.px: 10
+width.fixed.px: 261
+height.fixed.px: 146
+padding-horizontal.px: 43
+padding-vertical.px: 51
+align-content: center
 
 -- ftd.image:
 src: $client-card.src
-width.fixed.px: 154 
 
 -- end: ftd.column
 
@@ -509,8 +597,16 @@ width.fixed.px: 154
 
 
 
--- record clients-record:
+-- record client-record:
 ftd.image-src src: 
+
+
+
+
+
+
+
+
 
 
 
@@ -524,31 +620,18 @@ ftd.image-src src:
 
 -- component generation:
 caption title:
-ftd.image-src src:
 body body:
+optional ftd.image-src bg-img:
 integer width: $width
 
-
 -- ftd.column:
+width: fill-container
 align-content: center
-width: fill-container
 
 -- ftd.column:
-width: fill-container
-max-width.fixed.px: $generation.width 
-
--- ftd.column:
-margin-top.px: -140
-
--- ftd.image: 
-src: $generation.src
-
--- end: ftd.column
-
--- ftd.column:
-anchor: parent
 padding-vertical.px: 100
-padding-left.px: 165
+width: fill-container
+max-width.fixed.px: $generation.width
 
 -- ftd.text: $generation.title
 width.fixed.percent: 65
@@ -556,16 +639,25 @@ color: $inherited.colors.text
 role: $inherited.types.heading-large
 
 -- ftd.text: $generation.body
-width.fixed.percent: 70
-color: $inherited.colors.border
+width.fixed.percent: 65
+color: $inherited.colors.text
 role: $inherited.types.copy-regular
 
 -- end: ftd.column
 
--- end: ftd.column
+-- ftd.column:
+top.px: -140
+anchor: parent
+left.px: 0
+
+-- ftd.image: 
+if: { generation.bg-img != NULL }
+src: $generation.bg-img
+
 
 -- end: ftd.column
 
+-- end: ftd.column
 
 -- end: generation
 
@@ -576,47 +668,1180 @@ role: $inherited.types.copy-regular
 
 
 
--- component experiences:
+
+
+-- component feature-banner:
 caption title:
 body body:
-ftd.image-src src1:
-ftd.image-src src2:
+optional ftd.image-src bg-img:
+ftd.image-src banner-img:
 integer width: $width
-;;integer height: $height
-integer padding-horizontal: 100
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+align-content: center
+width: fill-container
+max-width.fixed.px: $feature-banner.width 
+padding-top.px: 127
+
+-- ftd.column:
+anchor: parent
+top.px: -160
+right.px: 0
+height.fixed.px: 366
+width.fixed.px: 344
+overflow: hidden
+
+-- ftd.image: 
+if: { feature-banner.bg-img != NULL }
+src: $feature-banner.bg-img
+
+-- end: ftd.column
+
+-- ftd.column:
+
+-- ftd.text: $feature-banner.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text: $feature-banner.body
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 32 
+
+
+-- ftd.image:
+src: $feature-banner.banner-img
+margin-top.px: 67
+max-width.fixed.px: $width
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: feature-banner
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;-- component testimonials:
+;;
+;;
+;;-- end: testimonials
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;
+;;-- component slider-wrapper:
+;;
+;;
+;;
+;;-- end: slider-wrapper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component slider-item:
+caption title:
+body body:
+ftd.image-src user-icon-src:
+integer width: $width
+string username:
+string designation:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+padding-horizontal.px: 225
+padding-vertical.px: 100
+align-content: center
+max-width.fixed.px: $slider-item.width
+
+-- ftd.text: $slider-item.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.source-code
+color: $inherited.colors.text
+text-align: center
+margin-top.px: 32
+
+$slider-item.body
+
+-- user: $slider-item.username
+src: $slider-item.user-icon-src
+
+$slider-item.designation
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: slider-item
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component slider-nav-wrapper:
+;;string parent-id:
+optional integer b-radius: 50
+optional integer height: 16
+optional integer width: 16
+optional integer space: 16
+
+-- ftd.column:
+;;anchor.id: $slider-nav-wrapper.parent-id
+;;left.px: 0
+;;right.px: 0
+
+-- ftd.row:
+spacing.fixed.px: $slider-nav-wrapper.space
+
+-- slider-nav: 
+b-radius: $slider-nav-wrapper.b-radius
+height: $slider-nav-wrapper.height
+width: $slider-nav-wrapper.width
+is-active: true
+
+-- slider-nav: 
+b-radius: $slider-nav-wrapper.b-radius
+height: $slider-nav-wrapper.height
+width: $slider-nav-wrapper.width
+is-active: false
+
+-- slider-nav: 
+b-radius: $slider-nav-wrapper.b-radius
+height: $slider-nav-wrapper.height
+width: $slider-nav-wrapper.width
+is-active: false
+
+-- slider-nav: 
+b-radius: $slider-nav-wrapper.b-radius
+height: $slider-nav-wrapper.height
+width: $slider-nav-wrapper.width
+is-active: false
+
+-- slider-nav: 
+b-radius: $slider-nav-wrapper.b-radius
+height: $slider-nav-wrapper.height
+width: $slider-nav-wrapper.width
+is-active: false
+
+-- end: ftd.row
+
+
+-- end:ftd.column
+
+-- end: slider-nav-wrapper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component slider-nav:
+boolean is-active: 
+integer b-radius:
+integer height:
+integer width:
+
+
+-- ftd.column: 
+border-radius.px: $slider-nav.b-radius
+height.fixed.px: $slider-nav.height
+width.fixed.px: $slider-nav.width
+background.solid: $inherited.colors.text
+background.solid if { slider-nav.is-active }: $inherited.colors.cta-primary.base
+
+-- end: ftd.column
+
+-- end: slider-nav
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component user:
+caption title:
+body body:
+ftd.image-src src:
+
+-- ftd.column:
+
+-- ftd.row:
+spacing.fixed.px: 16
+
+-- ftd.image:
+src: $user.src
+
+-- ftd.column:
+
+-- ftd.text: $user.title
+role: $inherited.types.blockquote
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+$user.body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: user
+
+
+
+
+
+
+
+
+
+
+
+
+-- component features:
+caption title:
+body body:
+optional string label: 
+feature-record list list-of-features:
+integer width: $width
 
 -- ftd.column:
 align-content: center
 width: fill-container
 
 -- ftd.column:
-width: fill-container
-max-width.fixed.px: $experiences.width 
+max-width.fixed.px: $features.width
+align-content: center
+padding-top.px: 100
 
 -- ftd.column:
-anchor: parent
-margin-top.px: -140
-right.px: -180
+align-content: center
+max-width.fixed.px: 730
+width: fill-container
 
--- ftd.image: 
-src: $experiences.src1
+-- ftd.text: $features.label
+if: { features.label != NULL }
+text-align: center
+color: $inherited.colors.text
+role: $inherited.types.button-small
+
+
+-- ftd.text: $features.title
+max-width.fixed.percent: 75
+color: $inherited.colors.text
+role: $inherited.types.heading-medium
+text-align: center
+
+-- ftd.text: $features.body
+color: $inherited.colors.text
+role: $inherited.types.copy-regular
+margin-top.px: 8 
+text-align: center
+width: fill-container
+
 
 -- end: ftd.column
 
--- ftd.column:
 
--- ftd.text: $experiences.title
+-- ftd.row: 
+margin-vertical.px: 100
+wrap: true
+spacing.fixed.px: 56
+width: fill-container
+align-content: center
+
+-- feature-card: $card.title
+$loop$: $features.list-of-features as $card
+src: $card.feature-icon
+
+$card.body
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: features
+
+
+
+
+
+
+
+
+
+-- component feature-card:
+caption title:
+body body:
+ftd.image-src src:
+
+
+-- ftd.row:
+width: fill-container
+spacing.fixed.px: 24
+max-width.fixed.px: 517
+
+-- ftd.column:
+background.solid: $inherited.colors.cta-primary.base
+padding.px: 12
+border-radius.px: 6
+
+-- ftd.image:
+src: $feature-card.src
+
+-- end: ftd.column
+
+
+-- ftd.column: 
+
+-- ftd.text: $feature-card.title
+color: $inherited.colors.text
+role: $inherited.types.button-large 
+
+-- ftd.text:
+color: $inherited.colors.text
+role: $inherited.types.label-large
+margin-top.px: 8 
+max-width.fixed.percent: 90
+
+$feature-card.body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+
+-- end: feature-card
+
+
+
+
+
+
+-- record feature-record:
+caption title:
+body body:
+ftd.image-src feature-icon:
+
+
+
+
+
+
+
+
+
+
+
+
+-- component faster:
+caption title:
+body body:
+string heading1:
+string heading1-body:
+string heading2:
+string heading2-body:
+string heading3:
+string heading3-body:
+integer width: $width
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.row:
+padding-vertical.px: 100
+padding-horizontal.px: 26
+spacing: space-between
+width: fill-container
+max-width.fixed.px: $faster.width
+align-self: center
+
+-- ftd.column:
+width.fixed.px: 465
+align-self: center
+
+-- ftd.text: $faster.title
 color: $inherited.colors.text
 role: $inherited.types.heading-large
 
--- ftd.text: $experiences.body
-color: $inherited.colors.border
-role: $inherited.types.copy-regular
+-- ftd.text: $faster.body
+role: $inherited.types.source-code
+color: $inherited.colors.text
 
+-- end: ftd.column
+
+
+-- ftd.column:
+width.fixed.px: 422
+
+-- faster-list: $faster.heading1
+maxW: 269
+
+$faster.heading1-body
+
+
+-- ftd.column:
+margin-vertical.px: 45
+
+-- faster-list: $faster.heading2
+maxW: 155
+
+$faster.heading2-body
+
+-- end: ftd.column
+
+-- faster-list: $faster.heading3
+maxW: 206
+
+$faster.heading3-body
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: faster
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component faster-list:
+caption title:
+body body:
+integer maxW: 
+
+-- ftd.column:
+
+-- ftd.text: $faster-list.title
+color: $inherited.colors.text
+role: $inherited.types.heading-large
+
+-- ftd.text: 
+role: $inherited.types.source-code
+color: $inherited.colors.text
+max-width.fixed.px: $faster-list.maxW
+
+$faster-list.body
+
+-- end: ftd.column
+
+-- end: faster-list
+
+
+
+
+
+
+
+
+
+
+-- component faq:
+caption title:
+optional body body:
+ftd.image-src dropdown-icon:
+question-record list questions:
+integer width: $width
+
+-- ftd.column:
+align-content: center
+width: fill-container
+padding-top.px: 50
+padding-bottom.px: 71
+
+-- ftd.column:
+max-width.fixed.px: $faq.width
+align-content: center
+width: fill-container
+
+-- ftd.text: $faq.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- ftd.text: 
+if: { faq.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 29
+max-width.fixed.px: 919
+text-align: center 
+
+$faq.body
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: 750
+
+-- question-accordion: $card.title
+$loop$: $faq.questions as $card
+src: $faq.dropdown-icon
+
+$card.body
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faq
+
+
+
+
+
+
+
+
+
+
+
+
+-- component question-accordion: 
+caption title: 
+body body: 
+boolean $open: false
+ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.step-1
+margin-top.px: 30
+
+-- ftd.column:
+max-width.fixed.px: 750
+border-radius.px: 6
+width: fill-container
+padding-vertical.px: 40
+
+-- ftd.row: 
+width: fill-container
+spacing: space-between
+$on-click$: $toggle($value=$question-accordion.open)
+padding-horizontal.px: 40 
+
+-- ftd.text: $question-accordion.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- ftd.image: 
+src: $question-accordion.src
+;;if: { question-accordion.open }
+
+-- end: ftd.row
+
+-- ftd.text: $question-accordion.body
+padding-top.px: 20
+padding-horizontal.px: 40
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+height: hug-content
+if: {question-accordion.open}
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: question-accordion
+
+
+
+
+-- record question-record:
+caption title:
+body body:
+
+-- void toggle(value):
+boolean $value:
+
+value = !value
+
+
+
+
+
+-- component newsletter:
+caption title:
+string cta-placeholder:
+string cta-label:
+optional ftd.image-src cta-icon:
+optional ftd.image-src info-icon:
+optional string info:
+integer width: $width
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid: $inherited.colors.background.step-1
+
+-- ftd.column:
+max-width.fixed.px: 750
+padding-vertical.px: 121
+align-content: center
+
+-- ftd.text: $newsletter.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+text-align: center
+
+-- ftd.row:
+padding-top.px: 40
+align-content: center
+
+-- ftd.text-input:
+margin-right.px: 8
+min-width.fixed.px: 240
+placeholder: $newsletter.cta-placeholder
+background.solid: transparent
+border-color: $inherited.colors.cta-primary.base
+border-width.px: 1 
+border-radius.px: 6
+padding.px: 15
+color: $inherited.colors.text
+
+-- cta-button: $newsletter.cta-label
+role: primary
+link: /
+border-radius: 4 
+;;if: { newsletter.cta-icon != NULL }
+src: $newsletter.cta-icon
+
+-- end: ftd.row
+
+-- end: ftd.column
+-- end: ftd.column
+
+-- end: newsletter
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+caption title:
+body body:
+footer-logo-record list list-of-footer-logo:
+children footer-wrap:
+optional ftd.color bg-color:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+background.solid if { footer.bg-color != NULL }: $footer.bg-color
+
+-- ftd.column:
+width: fill-container
+align-content: center
+children: $footer.footer-wrap
+
+-- end: ftd.column
+
+
+-- footer-links-wrapper:
+
+-- end: footer-links-wrapper
+
+-- footer-copyright: $footer.title
+list-of-footer-logo: $footer.list-of-footer-logo
+
+$footer.body
+
+-- end: footer-copyright
+
+
+-- end: ftd.column
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+
+
+-- component footer-links:
+caption title:
+string link1:
+string link2:
+string link3:
+string link4:
+string link5:
+ftd.color footer-color: 
+
+-- ftd.column:
+color: $footer-links.footer-color
+
+-- ftd.text: $footer-links.title
+padding-vertical.px: 7
+
+-- ftd.text: $footer-links.link1
+padding-vertical.px: 7
+
+-- ftd.text: $footer-links.link2
+padding-vertical.px: 7
+
+-- ftd.text: $footer-links.link3
+padding-vertical.px: 7
+
+-- ftd.text: $footer-links.link4
+padding-vertical.px: 7
+
+-- ftd.text: $footer-links.link5
+padding-vertical.px: 7
+
+-- end: ftd.column
+
+-- end: footer-links
+
+
+
+
+
+
+
+-- component footer-links-wrapper:
+integer width: $width
+children footer-child:
+
+-- ftd.row:
+margin-top.px: 54
+spacing: space-between
+width: fill-container
+max-width.fixed.px: $footer-links-wrapper.width
+children: $footer-links-wrapper.footer-child
+
+-- end: ftd.row
+
+-- end: footer-links-wrapper
+
+
+
+
+
+
+
+
+
+
+
+-- component footer-copyright:
+caption title:
+body body:
+footer-logo-record list list-of-footer-logo:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-bottom.px: 54
+
+-- ftd.text: $footer-copyright.title
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- ftd.row:
+padding-vertical.px: 24
 
 -- ftd.image:
-src: $experiences.src2
+$loop$: $footer-copyright.list-of-footer-logo as $item
+src: $item.src
+margin-horizontal.px: 12
 
+-- end: ftd.row
+
+
+-- ftd.text: 
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+
+$footer-copyright.body
+
+-- end: ftd.column
+
+-- end: footer-copyright
+
+
+
+-- record footer-logo-record:
+ftd.image-src src:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;---------------------------------------------------------------------------------------------------------------
+;;-----------------------------------------------blog-listing-page-----------------------------------------------
+;;---------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+-- component article-hero:
+ftd.image-src hero-img:
+string hero-title:
+string hero-body:
+string hero-description:
+string cta-label1:
+string cta-label2:
+ftd.image-src cta-icon1:
+ftd.image-src cta-icon2:
+optional string likes:
+optional string comments:
+optional string date:
+optional ftd.image-src date-icon:
+optional ftd.image-src likes-icon:
+optional ftd.image-src comments-icon:
+integer width: 
+
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.column:
+width: fill-container
+max-width.fixed.px: $article-hero.width
+
+-- ftd.row:
+padding-vertical.px: 88
+spacing.fixed.px: 125
+align-content: center
+
+-- ftd.image: 
+src: $article-hero.hero-img
+
+-- ftd.column:
+max-width.fixed.px: 445
+
+-- ftd.text: $article-hero.hero-title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- ftd.text: 
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 24
+
+$article-hero.hero-body
+
+-- ftd.row:
+spacing.fixed.px: 17
+margin-top.px: 40
+
+-- cta-button: $article-hero.cta-label1
+role: primary
+border-radius: 4 
+src: $article-hero.cta-icon1
+
+-- cta-button: $article-hero.cta-label1
+role: primary
+border-radius: 4 
+src: $article-hero.cta-icon2
+
+-- end: ftd.row
+
+-- ftd.text: $article-hero.hero-description
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: article-hero
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component latest-blog:
+caption title:
+body body:
+post-card-record list list-of-posts:
+integer width: 1440
+
+-- ftd.column:
+width: fill-container
+align-content: center
+max-width.fixed.px: $latest-blog.width
+
+-- ftd.column:
+align-content: center
+
+-- ftd.text: $latest-blog.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 32
+text-align: center
+max-width.fixed.px: 648
+
+$latest-blog.body
+
+-- end: ftd.column
+
+
+-- ftd.row:
+wrap: true
+spacing.fixed.px: 24
+width: fill-container
+align-content: center
+
+-- post-card: 
+$loop$: $latest-blog.list-of-posts as $post
+body: $post.card-body
+image: $post.image
+comments: $post.comments
+likes: $post.likes
+author: $post.author
+author-profile: $post.author-profile
+author-icon: $post.author-icon
+likes-icon: $post.likes-icon
+comments-icon: $post.comments-icon
+
+-- end: ftd.row
+
+-- ftd.column:
+margin-vertical.px: 50
+
+-- slider-nav-wrapper: 
+b-radius: 0
+height: 10
+width: 24
+space: 4
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: latest-blog
+
+
+
+
+
+-- record post-card-record:
+body card-body:
+ftd.image-src image:
+string comments:
+string likes:
+string author:
+string author-profile:
+ftd.image-src author-icon:
+ftd.image-src likes-icon:
+ftd.image-src comments-icon:
+
+
+
+
+
+
+
+-- component post-card:
+body body:
+ftd.image-src image:
+string comments:
+string likes:
+string author:
+string author-profile:
+ftd.image-src author-icon:
+integer border-width: 1
+ftd.image-src likes-icon:
+ftd.image-src comments-icon:
+
+-- ftd.column:
+max-width.fixed.px: 424
+margin-top.px: 72
+
+-- ftd.image: 
+src: $post-card.image
+
+-- ftd.column:
+border-width.px: $post-card.border-width
+border-color: $inherited.colors.text
+border-top-width.px: 0
+padding.px: 32
+
+-- ftd.row:
+spacing.fixed.px: 20
+
+-- ftd.row:
+spacing.fixed.px: 6
+
+-- ftd.image: 
+src: $post-card.likes-icon
+
+-- ftd.text: $post-card.likes
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 6
+
+-- ftd.image: 
+src: $post-card.comments-icon
+
+-- ftd.text: $post-card.comments
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 12
+
+$post-card.body
+
+-- ftd.column:
+margin-top.px: 34
+
+-- user: $post-card.author
+src: $post-card.author-icon
+
+$post-card.author-profile
 
 -- end: ftd.column
 
@@ -624,4 +1849,541 @@ src: $experiences.src2
 
 -- end: ftd.column
 
--- end: experiences
+-- end: post-card
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;---------------------------------------------------------------------------------------------------------------
+;;-----------------------------------------------blog-details-page-----------------------------------------------
+;;---------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-- component breadcrums: 
+caption title:
+optional ftd.image-src arrow:
+
+-- ftd.column:
+width: fill-container
+align-content: center
+margin-vertical.px: 51
+
+-- ftd.row:
+align-content: center
+spacing.fixed.px: 6
+padding-right.px: 6
+
+-- ftd.text: $breadcrums.title
+role: $inherited.types.copy-small
+color: $inherited.colors.text
+
+-- ftd.image: 
+if: { $breadcrums.arrow != NULL }
+src: $breadcrums.arrow
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: breadcrums
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component blog-heading:
+caption title:
+optional body body:
+ftd.image-src author-icon:
+string author-profile:
+string author:
+ftd.image-src img-left:
+ftd.image-src img-right:
+integer width: 
+
+-- ftd.column:
+width: fill-container
+align-content: center
+max-width.fixed.px: $blog-heading.width
+margin-bottom.px: 50
+
+-- ftd.text: $blog-heading.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+max-width.fixed.px: 918
+text-align: center
+
+-- ftd.column:
+margin-vertical.px: 50
+
+-- user: $blog-heading.author
+src: $blog-heading.author-icon
+
+$blog-heading.author-profile
+
+-- end: ftd.column
+
+-- ftd.row:
+spacing.fixed.px: 28
+
+-- ftd.image:
+src: $blog-heading.img-left
+
+-- ftd.image:
+src: $blog-heading.img-right
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+
+-- end: blog-heading
+
+
+
+
+
+
+
+
+
+
+
+
+-- component blog-content:
+optional caption title:
+optional body body:
+optional string question:
+optional string solution:
+optional ftd.image-src blog-img:
+optional string img-label:
+optional string img-title:
+optional string description:
+integer width: 
+
+-- ftd.column:
+max-width.fixed.px: $blog-content.width
+width: fill-container
+
+-- ftd.column:
+margin-vertical.px: 30
+
+-- ftd.text: $blog-content.title
+if: { $blog-content.title != NULL }
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- ftd.text: 
+if: { $blog-content.body != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 20
+
+$blog-content.body
+
+-- ftd.text: $blog-content.question
+if: { $blog-content.question != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 20
+
+-- ftd.text: $blog-content.solution
+if: { $blog-content.solution != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-top.px: 30
+
+
+-- ftd.text: $blog-content.img-title
+if: { $blog-content.img-title != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.cta-danger.text
+margin-top.px: 30
+
+-- end: ftd.column
+
+
+-- ftd.column:
+align-content: center 
+
+-- ftd.image: 
+if: { $blog-content.blog-img != NULL }
+src: $blog-content.blog-img
+
+-- ftd.text: $blog-content.img-label
+if: { $blog-content.img-label != NULL }
+role: $inherited.types.fine-print
+color: $inherited.colors.text
+margin-top.px: 30
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: blog-content
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;---------------------------------------------------------------------------------------------------------------
+;;-----------------------------------------------Documentation-page----------------------------------------------
+;;---------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-- component document-header:
+caption title:
+string nav1:
+string nav2:
+string nav3:
+string nav4:
+ftd.image-src arrow:
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 40
+
+-- ftd.row:
+
+-- breadcrums: $document-header.nav1
+arrow: $document-header.arrow
+
+-- breadcrums: $document-header.nav2
+arrow: $document-header.arrow
+
+-- breadcrums: $document-header.nav3
+arrow: $document-header.arrow
+
+-- breadcrums: $document-header.nav4
+arrow: $document-header.arrow
+
+-- end: ftd.row
+
+-- ftd.text: $document-header.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- end: document-header
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component page-wrapper:
+ftd.image-src arrow:
+document-record list list-of-navs:
+integer width: 1440
+children child:
+
+-- ftd.column:
+width: fill-container
+;;padding-horizontal.px: 40
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+children: $page-wrapper.child
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: page-wrapper
+
+
+
+
+
+
+
+
+
+
+-- record document-record:
+caption title:
+body body:
+
+
+
+
+
+
+
+
+-- component left-sidebar:
+caption title:
+optional string sub-links1:
+optional string sub-links2:
+optional string sub-links3:
+optional string sub-links4:
+ftd.image-src arrow:
+document-record list list-of-navs:
+
+-- ftd.column:
+width: fill-container
+padding-vertical.px: 50
+padding-horizontal.px: 26
+
+-- ftd.column:
+
+-- document-dropdown: $nav.title
+$loop$: $left-sidebar.list-of-navs as $nav
+body: $nav.body
+src: $left-sidebar.arrow
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: left-sidebar
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component col:
+children child:
+
+-- ftd.column:
+padding-vertical.px: 50
+padding-horizontal.px: 50
+
+-- ftd.column:
+max-width.fixed.px: 717
+children: $col.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: col
+
+
+
+
+
+
+
+
+
+-- component right-sidebar:
+caption title:
+children child:
+
+-- ftd.column:
+width: fill-container
+padding-left.px: 20
+padding-top.px: 58
+
+-- ftd.text: $right-sidebar.title
+color: $inherited.colors.cta-danger.text
+role: $inherited.types.blockquote
+
+-- ftd.column:
+children: $right-sidebar.child
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: right-sidebar
+
+
+
+
+
+
+
+
+-- component text:
+caption title:
+ftd.color color:
+integer marginTop: 12
+
+-- ftd.column:
+margin-top.px: $text.marginTop
+
+-- ftd.text: $text.title
+role: $inherited.types.copy-small
+color: $text.color
+
+-- end: ftd.column
+
+-- end: text
+
+
+
+
+
+-- component doc-paragraph:
+body body:
+
+-- ftd.column:
+margin-top.px: 20
+
+-- ftd.text:
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+$doc-paragraph.body
+
+-- end: ftd.column
+
+-- end: doc-paragraph
+
+
+
+
+
+
+
+
+-- component doc-image:
+ftd.image-src image:
+
+-- ftd.column:
+margin-vertical.px: 20
+
+-- ftd.image:
+src: $doc-image.image
+
+-- end: ftd.column
+
+-- end: doc-image
+
+
+
+
+
+
+
+-- component doc-code:
+string code:
+
+-- ftd.column:
+
+-- ftd.text: $doc-code.code
+
+-- end: ftd.column
+
+-- end: doc-code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component document-dropdown: 
+caption title: 
+body body: 
+boolean $open: false
+ftd.image-src src:
+
+-- ftd.column:
+width: fill-container
+margin-top.px: 30
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row: 
+width: fill-container
+spacing.fixed.px: 15
+$on-click$: $toggle($value=$document-dropdown.open)
+align-content: center
+
+-- ftd.image: 
+src: $document-dropdown.src
+;;if: { document-dropdown.open }
+
+-- ftd.text: $document-dropdown.title
+role: $inherited.types.heading-tiny
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.text: $document-dropdown.body
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+if: {document-dropdown.open}
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: document-dropdown
+
+
+
+
+
+
