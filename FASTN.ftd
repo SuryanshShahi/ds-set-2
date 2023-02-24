@@ -3,23 +3,18 @@
 -- fastn.package: fifthtry.github.io/ds-set-2
 download-base-url: https://raw.githubusercontent.com/fifthtry/ds-set-2/main
 
--- fastn.dependency: fifthtry.github.io/doc-site as ds
+-- fastn.dependency: fifthtry.github.io/sailing-shark-cs as cs
 
--- fastn.auto-import: ds
+-- fastn.auto-import: cs
 
--- fastn.dependency: fifthtry.github.io/sailing-shark-cs as shark
+-- fastn.dependency: fifthtry.github.io/sailing-shark-typography as typo
 
--- fastn.auto-import: shark
-
--- fastn.dependency: fifthtry.github.io/sailing-shark-typography as tf
-
--- fastn.auto-import: tf
-
+-- fastn.auto-import: typo
 
 -- fastn.sitemap:
 
-# label: /
-# label: /
-# label: /
-# label: /
+# Home: /
+# Blog-list: /blog-listing-page
+# Blog-details: /blog-detail-page
+# Documentation: /documentation-page
 # label: /
