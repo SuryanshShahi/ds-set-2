@@ -2299,7 +2299,7 @@ children: $sub-section.child
 
 -- component text:
 caption title:
-ftd.color color:
+optional ftd.color color: $inherited.colors.text-strong
 integer marginTop: 12
 optional integer marginLeft: 0
 optional string fontSize: xs
