@@ -2,7 +2,7 @@
 -- import: fifthtry.github.io/ds-set-2/lib as lp
 -- import: fifthtry.github.io/ds-set-2 as data
 
--- lp.page:
+-- lp.page: 
 cta-label: PRIMARY
 brand-name: Fastn
 list-of-footer-logo: $data.list-of-footer-logo
