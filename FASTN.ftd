@@ -20,7 +20,7 @@ download-base-url: https://raw.githubusercontent.com/fifthtry/ds-set-2/main
 
 -- fastn.sitemap:
 
-# Home: /
+# Home: index.html
 # Blog-list: /blog-listing-page
 # Blog-details: /blog-detail-page
 # Documentation: /documentation-page
