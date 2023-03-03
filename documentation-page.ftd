@@ -19,26 +19,113 @@ arrow: $assets.files.assets.arrowRight.png
 
 
 -- lp.page-wrapper: 
-list-of-navs: $list-of-navs
-arrow: $assets.files.assets.arrowRight.png
 
 
 
 
--- lp.left-sidebar: hello
-arrow: $assets.files.assets.arrowRight.png
-list-of-navs: $list-of-navs
+
+-- lp.left-sidebar:
+maxW: 320
+
+
+-- lp.document-dropdown: Home
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: Pocket
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: History
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: Service
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- lp.text: Cash
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: My Bills
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: Saved
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
 
 -- end: lp.left-sidebar
 
 
 
+
 -- lp.col: 
 
+-- lp.sub-section:
 
 -- lp.text: Edge Middleware
 color: $inherited.colors.text
-marginTop: 20
+marginTop: 0
+fontSize: md
 
 -- lp.doc-paragraph:
 
@@ -66,6 +153,7 @@ image: $assets.files.assets.doc1.png
 
 
 
+
 -- lp.doc-paragraph:
 
 As a developer, Edge Middleware gives you more control over the user experience, without adding additional size to the application, meaning better performance. For your end-users, they experience pre-rendered, personalized content with very low latency because it's running on the edge.
@@ -80,99 +168,490 @@ Some common use-cases of Middleware are:
 -- end: lp.doc-paragraph
 
 
--- lp.text: • Authetication
-color: $inherited.colors.cta-danger.text
+-- lp.text: • Authentication
+color: $inherited.colors.cta-primary.base
+marginTop: 20
+fontSize: normal
+
+-- lp.text: • Geolocation
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • Working with cookies
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • A/B testing
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • Bot protection
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • Rewrites
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+
+
+-- lp.text: • Authentication
+color: $inherited.colors.cta-primary.base
+marginTop: 44
+fontSize: normal
+
+-- lp.text: • Geolocation
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • Working with cookies
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • A/B testing
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • Bot protection
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+-- lp.text: • Rewrites
+color: $inherited.colors.cta-primary.base
+marginTop: 8
+fontSize: normal
+
+
+-- lp.toast: Important
+toast-icon: $assets.files.assets.important.png
+bg-color: $inherited.colors.info.text
+color: $inherited.colors.text
+maginTop: 44
+
+Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
+
+
+
+-- end: lp.sub-section
+
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Creating Edge Middleware
+color: $inherited.colors.text
+marginTop: 20
+fontSize: sm
+
+
+-- lp.doc-paragraph:
+
+You can use Edge Middleware with any framework. To add Middleware to your app, you need to create a middleware.ts or middleware.js file in the root of your project.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+If the Middleware function is a default export, it can be named anything you choose. If you choose to use a named export, it must be named middleware:
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-code: -- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+
+
+-- lp.doc-paragraph:
+
+The following code snippet shows an example of rewriting a URL, using a matcher config.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+Next.js Middleware comes with built in helpers that are based upon the native Fetch Event, Response, and Request Objects.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+See the next/server documentation for more information.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-code: -- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+
+-- lp.doc-paragraph:
+
+Edge Middleware is code that executes before a request is processed on a site. Based on the request, you can modify the response. Because it runs before the cache, using Middleware is an effective way of providing personalization to statically generated content. Depending on the incoming request, you can execute custom logic, rewrite, redirect, add headers and more, before returning a response.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+-- lp.sub-section:
+
+-- lp.text: Match Paths based on custom matcher config
+color: $inherited.colors.text
 marginTop: 20
 
--- lp.text: • Geolocation
-color: $inherited.colors.cta-danger.text
-marginTop: 8
 
--- lp.text: • Working with cookies
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+-- lp.doc-paragraph:
 
--- lp.text: • A/B testing
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
 
--- lp.text: • Bot protection
-color: $inherited.colors.cta-danger.text
-marginTop: 8
-
--- lp.text: • Rewrites
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+-- end: lp.doc-paragraph
 
 
+-- end: lp.sub-section
 
--- lp.text: • Authetication
-color: $inherited.colors.cta-danger.text
-marginTop: 44
 
--- lp.text: • Geolocation
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+-- lp.sub-section:
 
--- lp.text: • Working with cookies
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+-- lp.text: Match a single path
+color: $inherited.colors.text
+marginTop: 20
 
--- lp.text: • A/B testing
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+-- lp.doc-code: -- FTD.ROW
 
--- lp.text: • Bot protection
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+npx create-docusaurus@latest my-website classic
 
--- lp.text: • Rewrites
-color: $inherited.colors.cta-danger.text
-marginTop: 8
+-- end: lp.doc-code
+
+-- end: lp.sub-section
 
 
 
-;;-- lp.doc-code:
-;;code: this is body
-;;
-;;-- end: lp.doc-code
+-- lp.sub-section:
+
+-- lp.text: Match multiple paths
+color: $inherited.colors.text
+marginTop: 20
+
+-- lp.doc-code: -- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.sub-section
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Match using regex
+color: $inherited.colors.text
+marginTop: 20
+
+-- lp.doc-paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone. 
+
+-- end: lp.doc-paragraph
+
+
+-- lp.text: - Unordered lists are displayed with a preceding bullet point.
+color: $inherited.colors.text
+marginTop: 20
+marginLeft: 30
+
+-- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 30
+
+-- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 30
+
+-- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 30
+
+-- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 30
+
+-- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 30
+
+
+-- lp.doc-code: -- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+
+-- end: lp.sub-section
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Match based on character matching
+color: $inherited.colors.text
+marginTop: 20
+
+-- lp.doc-paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone. 
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-code: -- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+
+-- end: lp.sub-section
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Match paths based on conditional statements
+color: $inherited.colors.text
+marginTop: 20
+
+-- lp.doc-paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone. 
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-code: -- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.sub-section
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Loggings
+color: $inherited.colors.text
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone. 
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-image:
+image: $assets.files.assets.doc2.png
+
+-- end: lp.doc-image
+
+
+-- lp.doc-code: -- FTD.ROW
+maginTop: 0
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.sub-section
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Existing login connection
+color: $inherited.colors.text
+
+-- lp.doc-paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone. 
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-code: -- FTD.ROW
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.sub-section
+
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Choosing a connection when creating a project
+color: $inherited.colors.text
+
+-- lp.doc-paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone. 
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-image:
+image: $assets.files.assets.doc3.png
+
+-- end: lp.doc-image
+
+
+-- lp.doc-code: -- FTD.ROW
+maginTop: 0
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+-- end: lp.sub-section
+
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Known limitations
+color: $inherited.colors.text
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+Our suite of products are open source and available on Github. You are free to download install and customize them to your needs.We’d love to hear your feedback and suggestions, and collectively make Documentation easier and better for everyone. 
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-paragraph:
+
+We enable teams to iterate quickly and develop, preview, and ship delightful user experiences. Fastn has zero-configuration support for 35+ frontend frameworks and integrates with your headless content, commerce, or database of choice.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+
+
+
+
 
 
 -- end: lp.col
 
 
 
+
 -- lp.right-sidebar: Create Edge Middleware
+maxW: 370
 
 -- lp.text: Match Paths based on custom matcher config
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Match a single path
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Match multiple paths
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Match using regex
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Match based on character matching
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Match paths based on conditional statements
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Loggings
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Existing login connection
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Choosing a connection when creating a project
 color: $inherited.colors.text
+fontSize: normal
 
 -- lp.text: Known limitations
 color: $inherited.colors.text
+fontSize: normal
 
 -- end: lp.right-sidebar
 
@@ -182,8 +661,6 @@ color: $inherited.colors.text
 -- end: lp.page-wrapper
 
 
-
-
 -- end: lp.page
 
 
@@ -191,29 +668,3 @@ color: $inherited.colors.text
 
 
 
-
-
-
--- $lp.document-record list list-of-navs:
-
--- $lp.document-record: Home
-
-this is body
-
--- $lp.document-record: Pocket
-
-this is body
-
--- $lp.document-record: History
-
-this is body
-
--- $lp.document-record: Service
-
-this is body
-
--- $lp.document-record: Saved
-
-this is body
-
--- end: list-of-navs

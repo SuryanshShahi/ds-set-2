@@ -1,12 +1,14 @@
 -- import: fifthtry.github.io/ds-set-2/assets
 -- import: fifthtry.github.io/ds-set-2/lib as lp
+-- import: fifthtry.github.io/ds-set-2 as data
 
 
 -- lp.page: Blog Page
 cta-placeholder: Search
+show-search: true
 cta-label: PRIMARY
 brand-name: Fastn
-
+list-of-footer-logo: $data.list-of-footer-logo
 
 
 
@@ -37,52 +39,6 @@ list-of-posts: $list-of-posts
 Sed nec pharetra felis, in ultrices neque. Phasellus varius semper tellus, ac imperdiet erat commodo id. Aenean lobortis justo et velit ornare malesuada. 
 
 
-
-
-
-
--- lp.footer: Fastn
-list-of-footer-logo: $list-of-footer-logo
-
-Copyright ©2022. Fastn Inc.
-
--- lp.footer-links-wrapper:
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- end: lp.footer-links-wrapper
-
--- end: lp.footer
 
 
 

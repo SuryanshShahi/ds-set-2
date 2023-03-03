@@ -1,22 +1,23 @@
 -- import: fifthtry.github.io/ds-set-2/assets
 -- import: fifthtry.github.io/ds-set-2/lib as lp
+-- import: fifthtry.github.io/ds-set-2 as data
 
 
 -- lp.page:
 cta-label: PRIMARY
 brand-name: Fastn
-
+list-of-footer-logo: $data.list-of-footer-logo
 
 
 
 -- lp.breadcrums: Breadcrums
+nav: Breadcrums
 arrow: $assets.files.assets.arrowRight.png
 
 
 
 
 -- lp.blog-heading: Bringing the world together through live experiences.
-width: 1049
 author: Patrica AVA
 author-profile: UI Designer
 author-icon: $assets.files.assets.user.png
@@ -24,136 +25,386 @@ img-left: $assets.files.assets.blog-left-img.png
 img-right: $assets.files.assets.blog-right-img.png
 
 
+-- lp.blog-content:
 
+-- lp.text: Bringing the world together through live experiences.
+color: $inherited.colors.text
+marginTop: 0
+fontSize: sm
 
--- lp.blog-content: Bringing the world together through live experiences.
-width: 1049
-question: Where does technology exploit our minds’ weaknesses?
-solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
-blog-img: $assets.files.assets.blog1.png
-img-label: Bringing the world together through live experiences.
-
-I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
-When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
-
-
-
-
--- lp.blog-content: Bringing the world together through live experiences.
-width: 1049
-solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
-blog-img: $assets.files.assets.blog2.png
-img-label: Bringing the world together through live experiences.
-description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+-- lp.doc-paragraph:
 
 I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+marginTop: 0
+
 When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
 
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+Where does technology exploit our minds’ weaknesses?
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-image:
+image: $assets.files.assets.blog1.png
+label: Bringing the world together through live experiences.
+
+-- end: lp.doc-image
+
+-- end: lp.blog-content
 
 
 
--- lp.blog-content: 
-width: 1049
-blog-img: $assets.files.assets.blog3.png
-img-label: Bringing the world together through live experiences.
 
 
+-- lp.blog-content:
 
 
--- lp.blog-content: Bringing the world together through live experiences.
-width: 1049
-solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
-blog-img: $assets.files.assets.blog4.png
-img-label: Bringing the world together through live experiences.
-description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+-- lp.text: Bringing the world together through live experiences.
+color: $inherited.colors.text
+marginTop: 0
+fontSize: sm
+
+-- lp.doc-paragraph:
 
 I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
 When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
 
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+-- end: lp.doc-paragraph
 
 
--- lp.blog-content: Bringing the world together through live experiences.
-width: 1049
-solution: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
-blog-img: $assets.files.assets.blog5.png
-img-label: Bringing the world together through live experiences.
-description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
-img-title: I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, 
+
+
+-- lp.text: - Unordered lists are displayed with a preceding bullet point.
+color: $inherited.colors.text
+marginTop: 18
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.doc-paragraph:
+
+I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-image:
+image: $assets.files.assets.blog2.png
+label: Bringing the world together through live experiences.
+
+-- end: lp.doc-image
+
+
+-- end: lp.blog-content
+
+
+
+-- lp.blog-content:
+
+-- lp.doc-image:
+image: $assets.files.assets.blog3.png
+label: Bringing the world together through live experiences.
+
+-- end: lp.doc-image
+
+-- end: lp.blog-content
+
+
+
+
+
+
+
+
+-- lp.blog-content:
+
+
+-- lp.text: Bringing the world together through live experiences.
+color: $inherited.colors.text
+marginTop: 0
+fontSize: sm
+
+-- lp.doc-paragraph:
 
 I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
 When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
 
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+-- end: lp.doc-paragraph
 
 
 
--- lp.blog-content: Bringing the world together through live experiences.
-width: 1049
-description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+-- lp.text: - Unordered lists are displayed with a preceding bullet point.
+color: $inherited.colors.text
+marginTop: 18
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.doc-paragraph:
+
+I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-image:
+image: $assets.files.assets.blog4.png
+label: Bringing the world together through live experiences.
+
+-- end: lp.doc-image
+
+
+-- end: lp.blog-content
+
+
+
+
+
+
+-- lp.blog-content:
+
+
+-- lp.text: Bringing the world together through live experiences.
+color: $inherited.colors.text
+marginTop: 0
+fontSize: sm
+
+-- lp.doc-paragraph:
 
 I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
 When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
 
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+I learned to think this way when I was a magician. Magicians start by looking for blind spots, edges, vulnerabilities and limits of people’s perception, so they can influence what people do without them even realizing it. Once you know how to push people’s buttons, you can play them like a piano.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.text: Bringing the world together through live experiences.
+color: $inherited.colors.cta-primary.base
+fontSize: regular
+
+-- lp.doc-image:
+image: $assets.files.assets.blog5.png
+label: Bringing the world together through live experiences.
+
+-- end: lp.doc-image
 
 
 
--- lp.blog-content: Bringing the world together through live experiences.
-width: 1049
-description: And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+-- end: lp.blog-content
+
+
+
+
+
+-- lp.blog-content:
+
+
+-- lp.text: Bringing the world together through live experiences.
+color: $inherited.colors.text
+marginTop: 0
+fontSize: sm
+
+-- lp.doc-paragraph:
 
 I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
 When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
 
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+And this is exactly what product designers do to your mind. They play your psychological vulnerabilities (consciously and unconsciously) against you in the race to grab your attention.Western Culture is built around ideals of individual choice and freedom. Millions of us fiercely defend our right to make “free” choices, while we ignore how those choices are manipulated upstream by menus we didn’t choose in the first place.
+
+-- end: lp.doc-paragraph
 
 
 
 
+-- lp.text: - Unordered lists are displayed with a preceding bullet point.
+color: $inherited.colors.text
+marginTop: 18
+marginLeft: 50
+fontSize: normal
 
--- lp.footer: Fastn
-list-of-footer-logo: $list-of-footer-logo
-bg-color: $inherited.colors.background.code
+-- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
 
-Copyright ©2022. Fastn Inc.
+-- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
 
--- lp.footer-links-wrapper:
+-- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
 
--- lp.footer-links: HEADING
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-footer-color: $inherited.colors.cta-danger.text
+-- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
 
--- lp.footer-links: HEADING
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-footer-color: $inherited.colors.cta-danger.text
+-- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
+color: $inherited.colors.text
+marginTop: 0
+marginLeft: 50
+fontSize: normal
 
--- lp.footer-links: HEADING
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-footer-color: $inherited.colors.cta-danger.text
 
--- lp.footer-links: HEADING
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-footer-color: $inherited.colors.cta-danger.text
-
--- end: lp.footer-links-wrapper
-
--- end: lp.footer
+-- end: lp.blog-content
 
 
 
+
+-- lp.blog-content:
+margin-bottom: 50
+
+-- lp.text: Bringing the world together through live experiences.
+color: $inherited.colors.text
+marginTop: 50
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+I’m an expert on how technology hijacks our psychological vulnerabilities. That’s why I spent the last three years as a Design Ethicist at Google caring about how to design things in a way that defends a billion people’s minds from getting hijacked.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+When using technology, we often focus optimistically on all the things it does for us. But I want to show you where it might do the opposite.
+
+-- end: lp.doc-paragraph
+
+
+
+-- end: lp.blog-content
 
 
 -- end: lp.page
@@ -165,24 +416,5 @@ footer-color: $inherited.colors.cta-danger.text
 
 
 
-
--- $lp.footer-logo-record list list-of-footer-logo:
-
--- $lp.footer-logo-record: 
-src: $assets.files.assets.fb.png
-
--- $lp.footer-logo-record: 
-src: $assets.files.assets.figma.png
-
--- $lp.footer-logo-record: 
-src: $assets.files.assets.google.png
-
--- $lp.footer-logo-record: 
-src: $assets.files.assets.chat.png
-
--- $lp.footer-logo-record: 
-src: $assets.files.assets.social.png
-
--- end: list-of-footer-logo
 
 
