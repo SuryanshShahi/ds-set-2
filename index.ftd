@@ -1,57 +1,359 @@
 -- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-2/lib as lp
 
 
 
--- ds.page: Welcome to your [FASTN site](https://fastn.dev/)
+-- $lp.lp.current-slide: 1
 
-FASTN Blank Package Template Repo
-
-🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
-
-
---- ds.image: doc-site
-src: $assets.files.doc-site-example.png
-width: fill
-
-
---- ds.h1: 🚀 Project Structure
-
-Inside of your FASTN project, you'll see the following folders and files:
-
-
---- ds.code:
-lang:
-
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FASTN.ftd
-├── index.ftd
-└── README.md
+-- lp.page:
+cta-label: PRIMARY
+brand-name: Fastn
+list-of-footer-logo: $list-of-footer-logo
 
 
 
---- ds.h1: 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
---- ds.code:
-lang:
-
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fastn build              | FASTN builder installs all `FASTN` dependencies|
-| fastn serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
 
 
---- ds.h1: 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fastn.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
 
+-- lp.hero-section: We transform ideas into digital outcomes.
+image: $assets.files.assets.hero.svg
+cta-label-left: Demo
+cta-url-left: /
+cta-label-right: How it works
+cta-url-right: /
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+
+
+
+
+
+
+
+-- lp.clients-container: Trusted by the top companies in this industry
+list-of-clients: $list-of-clients
+
+The only SaaS business platform that combines CRM, marketing automation & commerce.
+
+
+
+
+
+
+
+
+-- lp.generation: Built for the next generation of small business
+bg-img: $assets.files.assets.generation.png
+
+Fastn is an all-in-one payments platform where businesses can connect, transact, and grow together.
+
+-- end: lp.generation
+
+
+
+
+
+
+
+
+-- lp.promo-banner: Create
+src: $assets.files.assets.create.svg
+cta-label: Sign me up
+cta-icon: $assets.files.assets.arrow-right.png
+cta-url: /
+width: 1440
+
+Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.
+
+-- end: lp.promo-banner
+
+
+
+-- lp.promo-banner: Engage
+src: $assets.files.assets.engage.svg
+cta-label: Sign me up
+cta-icon: $assets.files.assets.arrow-right.png
+cta-url: /
+width: 1440
+img-order-left: false
+padding-left: 165
+padding-right: 125
+
+Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.
+
+-- end: lp.promo-banner
+
+
+
+-- lp.promo-banner: Analyze
+src: $assets.files.assets.analyze.svg
+cta-label: Sign me up
+cta-icon: $assets.files.assets.arrow-right.png
+cta-url: /
+width: 1440
+
+Welcome Studio gives you all the tools you need to create and host virtual experiences that look awesome and put your brand centerstage.
+
+-- end: lp.promo-banner
+
+
+
+
+
+
+
+
+-- lp.feature-banner: Experiences
+bg-img: $assets.files.assets.generation1.svg
+banner-img: $assets.files.assets.experiences.png
+width: 1440
+
+Lorem ipsum dolor sit amet
+
+
+
+
+
+
+
+
+
+-- lp.faster: SEE HOW MUCH FASTER YOU CAN GET PAID WITH FASTN
+heading1: +87%
+heading1-body: increased attendee engagement at Bitwise
+heading2: \$1.7M
+heading2-body: pipeline generated at Everbridge
+heading3: 58%
+heading3-body: attendee conversion rate at Interfolio
+
+Use our calculator to see how many days we can free up in cash flow for your business.
+
+-- end: lp.faster
+
+
+-- lp.qoutes:
+id: qoutes-parent
+
+-- lp.slider-wrapper:
+index: 1
+reset: $lp.current-slide
+
+
+-- lp.slider-item: Fastn
+username: Suryansh Shahi
+designation: Frontend Developer
+user-icon-src: $assets.files.assets.Vector.png
+
+A design approach is a general philosophy that may or may not include a guide for specific methods that work.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+
+-- end: lp.slider-item
+
+
+-- end: lp.slider-wrapper
+
+
+
+
+-- lp.slider-wrapper:
+index: 2
+reset: $lp.current-slide
+
+-- lp.slider-item: Fastn
+username: Muskan 
+designation: UI Designer
+user-icon-src: $assets.files.assets.user.png
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat augue in sem lobortis lacinia sed eget leo. Phasellus lacinia nec mi quis maximus. Fusce tincidunt vestibulum odio non ornare.
+
+-- end: lp.slider-item
+
+
+-- end: lp.slider-wrapper
+
+
+
+-- lp.slider-wrapper:
+index: 3
+reset: $lp.current-slide
+
+-- lp.slider-item: Fastn
+username: Patrica AVA
+designation: UI Designer
+user-icon-src: $assets.files.assets.user.png
+
+Maecenas sed pharetra urna, at volutpat orci. Maecenas ornare tincidunt turpis at euismod. Nulla eu condimentum elit. Vivamus condimentum felis nec dignissim efficitur. Vestibulum dapibus purus nec sagittis fermentum. 
+
+-- end: lp.slider-item
+
+
+-- end: lp.slider-wrapper
+
+
+
+-- lp.slider-nav-wrapper:
+parent-id: qoutes-parent
+
+-- lp.slider-nav:
+$active: true
+index: 1
+
+-- lp.slider-nav:
+index: 2
+
+-- lp.slider-nav:
+index: 3
+
+-- end: lp.slider-nav-wrapper
+
+-- end: lp.qoutes
+
+
+
+
+
+
+-- lp.features: We Transform ideas into digital outcomes
+label: KICKER
+list-of-features: $list-of-features
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+
+
+
+
+
+-- lp.faq: Frequently Asked Questions
+questions: $questions
+dropdown-icon: $assets.files.assets.arrow.png
+
+Flex is the only saas business platform that lets you run your business on one platform, seamlessly across all digital channels.
+
+
+
+
+
+-- lp.newsletter: We transform ideas into digital outcomes to elevate the connection between the brand and their users.
+cta-icon: $assets.files.assets.tick.png
+cta-placeholder: Label
+cta-label: Button
+
+
+
+
+
+
+
+
+-- end: lp.page
+
+
+
+
+
+
+
+
+
+-- $lp.client-record list list-of-clients:
+
+-- $lp.client-record: 
+src: $assets.files.assets.symtric.svg
+
+-- $lp.client-record: 
+src: $assets.files.assets.jiggle.svg
+
+-- $lp.client-record: 
+src: $assets.files.assets.resecrub.svg
+
+-- $lp.client-record: 
+src: $assets.files.assets.wishelp.svg
+
+-- end: list-of-clients
+
+
+
+
+
+
+
+
+-- $lp.footer-logo-record list list-of-footer-logo:
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.fb.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.figma.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.google.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.chat.png
+
+-- $lp.footer-logo-record: 
+src: $assets.files.assets.social.png
+
+-- end: list-of-footer-logo
+
+
+
+
+
+
+
+-- $lp.question-record list questions:
+
+-- $lp.question-record: How long does it take to ship my order? 
+
+Orders are usually shipped within 1-2 business days after placing the order. Orders are usually shipped within 1-2 business days after placing the order.
+
+-- $lp.question-record: What shipping options do you have?
+
+Orders are usually shipped within 1-2 business days after placing the order.
+
+-- $lp.question-record: What shipping options do you have?
+
+Orders are usually shipped within 1-2 business days after placing the order.
+
+-- $lp.question-record: What shipping options do you have?
+
+Orders are usually shipped within 1-2 business days after placing the order.
+
+-- $lp.question-record: What shipping options do you have?
+
+Orders are usually shipped within 1-2 business days after placing the order.
+
+-- end: questions
+
+
+
+
+
+
+-- $lp.feature-record list list-of-features:
+
+-- $lp.feature-record: Strategy and Consultancy
+feature-icon: $assets.files.assets.Vector.png 
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- $lp.feature-record: Strategy and Consultancy
+feature-icon: $assets.files.assets.Vector.png 
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- $lp.feature-record: Strategy and Consultancy
+feature-icon: $assets.files.assets.Vector.png 
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- $lp.feature-record: Strategy and Consultancy
+feature-icon: $assets.files.assets.Vector.png
+
+We are an award-winning strategic design company that provides consultancy services and help you create outstanding digital products.
+
+-- end: list-of-features

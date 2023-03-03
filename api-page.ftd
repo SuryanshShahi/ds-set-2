@@ -1,0 +1,914 @@
+-- import: fifthtry.github.io/ds-set-2/assets
+-- import: fifthtry.github.io/ds-set-2/lib as lp
+-- import: fifthtry.github.io/ds-set-2 as data
+
+-- lp.page: 
+cta-label: PRIMARY
+brand-name: Fastn
+list-of-footer-logo: $data.list-of-footer-logo
+
+-- lp.document-header: API Page
+nav1: Breadcrums
+nav2: Breadcrums
+nav3: Breadcrums
+nav4: Breadcrums
+arrow: $assets.files.assets.arrowRight.png
+
+
+-- lp.page-wrapper: 
+
+
+
+
+-- lp.left-sidebar:
+maxW: 320
+
+
+-- lp.document-dropdown: Home
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: Pocket
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: History
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: Service
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- lp.text: Cash
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: My Bills
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- lp.document-dropdown: Saved
+src: $assets.files.assets.arrowRight.png
+
+-- lp.text: Credit
+color: $inherited.colors.text
+marginTop: 20
+fontSize: blockquote
+
+-- lp.text: Transfer
+color: $inherited.colors.text
+marginTop: 15
+fontSize: blockquote
+
+-- end: lp.document-dropdown
+
+-- end: lp.left-sidebar
+
+
+
+
+
+
+
+-- lp.col: 
+
+-- lp.sub-section:
+
+-- lp.text: API Reference guide
+marginTop: 0
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.toast: Important
+toast-icon: $assets.files.assets.important.png
+bg-color: $inherited.colors.info.text
+color: $inherited.colors.text
+maginTop: 18
+
+Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
+
+-- end: lp.toast
+
+
+-- end: lp.sub-section
+
+
+-- lp.hr:
+maginTop: 18
+
+
+-- lp.sub-section:
+
+-- lp.text: Test and Live Mode API Keys
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+You can use Razorpay APIs in two modes, Test and Live. The API keys are different for each mode.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+-- lp.hr:
+maginTop: 18
+
+
+-- lp.sub-section:
+
+-- lp.text: Try Fastn APIs
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-image:
+image: $assets.files.assets.api1.png
+
+-- end: lp.doc-image
+
+-- lp.cta-button: Button
+role: primary
+link: /
+border-radius: 4 
+
+
+-- end: lp.sub-section
+
+
+-- lp.hr:
+maginTop: 18
+
+
+-- lp.sub-section:
+
+-- lp.text: Get Started Video
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API differs for every account as we release new versions and tailor functionality. Log in to see docs customised to your version of the API, with your test key and data.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-image:
+image: $assets.files.assets.api3.png
+
+-- end: lp.doc-image
+
+
+-- end: lp.sub-section
+
+
+-- lp.hr:
+maginTop: 0
+
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Handling errors
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.text: - Unordered lists are displayed with a preceding bullet point.
+marginTop: 18
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+
+-- lp.doc-code: -- FTD.ROW
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: lp.doc-code
+
+
+-- lp.toast: Important
+toast-icon: $assets.files.assets.warning.png
+bg-color: $inherited.colors.warning.text
+color: $inherited.colors.text
+maginTop: 18
+
+Please note that some functionality (for example, anchor links) will not work in development. The functionality will work as expected in production.
+
+-- end: lp.toast
+
+
+-- end: lp.sub-section
+
+
+
+
+
+
+-- lp.hr:
+maginTop: 18
+
+
+-- lp.sub-section:
+
+-- lp.text: Expanding Responses
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-image:
+image: $assets.files.assets.api2.png
+
+-- end: lp.doc-image
+
+
+
+-- lp.text: - Unordered lists are displayed with a preceding bullet point.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+-- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
+marginTop: 0
+marginLeft: 50
+fontSize: normal
+
+
+-- end: lp.sub-section
+
+
+
+-- lp.hr:
+maginTop: 18
+
+
+-- lp.sub-section:
+
+-- lp.text: Idempotent Requests
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Metadata
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+
+-- lp.doc-image:
+image: $assets.files.assets.api2.png
+
+-- end: lp.doc-image
+
+
+-- end: lp.sub-section
+
+
+-- lp.hr:
+maginTop: 0
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Pagination
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+-- lp.hr:
+maginTop: 18
+
+
+
+-- lp.sub-section:
+
+-- lp.text: Authentication
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+-- lp.hr:
+maginTop: 18
+
+
+-- lp.sub-section:
+
+-- lp.text: Kittens
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+
+-- lp.hr:
+maginTop: 18
+
+
+-- lp.sub-section:
+
+-- lp.text: Errors
+marginTop: 60
+fontSize: sm
+
+-- lp.doc-paragraph:
+
+The Stripe API is organised around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+You can use the Stripe API in test mode, which doesn't affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.
+
+-- end: lp.doc-paragraph
+
+-- lp.doc-paragraph:
+
+The Stripe API doesn't support bulk updates. You can work on only one object per request.
+
+-- end: lp.doc-paragraph
+
+-- end: lp.sub-section
+
+
+-- end: lp.col
+
+
+
+
+-- lp.right-sidebar: 
+maxW: 370
+
+
+-- lp.navBtns:
+
+-- lp.navTabs: Python
+bg-color: $inherited.colors.background.step-1
+color: $inherited.colors.text
+border-radius: 50
+
+-- lp.navTabs: Ruby
+bg-color: $inherited.colors.background.step-1
+color: $inherited.colors.text
+border-radius: 50
+
+-- lp.navTabs: React
+bg-color: $inherited.colors.cta-primary.base
+color: $inherited.colors.text
+border-radius: 50
+
+-- lp.navTabs: Vue
+bg-color: $inherited.colors.background.step-1
+color: $inherited.colors.text
+border-radius: 50
+
+-- lp.navTabs: Label
+bg-color: $inherited.colors.cta-primary.base
+color: $inherited.colors.text
+border-radius: 50
+
+-- end: lp.navBtns
+
+
+
+
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+-- cb.code: 
+lang: ftd
+
+\-- ftd.row
+maginTop: 18
+
+npx create-docusaurus@latest my-website classic
+
+-- end: cb.code
+
+
+-- end: lp.right-sidebar
+
+
+
+
+-- end: lp.page-wrapper
+
+
+
+
+-- end: lp.page
+
+
+
+
+
+
+
+
+
+
+
+
+
