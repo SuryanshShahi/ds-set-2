@@ -620,7 +620,6 @@ The Stripe API doesn't support bulk updates. You can work on only one object per
 -- end: lp.sub-section
 
 
-
 -- end: lp.col
 
 
