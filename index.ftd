@@ -1,10 +1,14 @@
 -- import: fifthtry.github.io/ds-set-2/assets
 -- import: fifthtry.github.io/ds-set-2/lib as lp
 
+
+
+-- $lp.lp.current-slide: 1
+
 -- lp.page:
 cta-label: PRIMARY
 brand-name: Fastn
-
+list-of-footer-logo: $list-of-footer-logo
 
 
 
@@ -126,17 +130,84 @@ heading3-body: attendee conversion rate at Interfolio
 
 Use our calculator to see how many days we can free up in cash flow for your business.
 
+-- end: lp.faster
+
+
+-- lp.qoutes:
+id: qoutes-parent
+
+-- lp.slider-wrapper:
+index: 1
+reset: $lp.current-slide
+
+
+-- lp.slider-item: Fastn
+username: Suryansh Shahi
+designation: Frontend Developer
+user-icon-src: $assets.files.assets.Vector.png
+
+A design approach is a general philosophy that may or may not include a guide for specific methods that work.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+
+-- end: lp.slider-item
+
+
+-- end: lp.slider-wrapper
 
 
 
 
+-- lp.slider-wrapper:
+index: 2
+reset: $lp.current-slide
+
+-- lp.slider-item: Fastn
+username: Muskan 
+designation: UI Designer
+user-icon-src: $assets.files.assets.user.png
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas volutpat augue in sem lobortis lacinia sed eget leo. Phasellus lacinia nec mi quis maximus. Fusce tincidunt vestibulum odio non ornare.
+
+-- end: lp.slider-item
+
+
+-- end: lp.slider-wrapper
+
+
+
+-- lp.slider-wrapper:
+index: 3
+reset: $lp.current-slide
 
 -- lp.slider-item: Fastn
 username: Patrica AVA
 designation: UI Designer
 user-icon-src: $assets.files.assets.user.png
 
-A design approach is a general philosophy that may or may not include a guide for specific methods that work.It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+Maecenas sed pharetra urna, at volutpat orci. Maecenas ornare tincidunt turpis at euismod. Nulla eu condimentum elit. Vivamus condimentum felis nec dignissim efficitur. Vestibulum dapibus purus nec sagittis fermentum. 
+
+-- end: lp.slider-item
+
+
+-- end: lp.slider-wrapper
+
+
+
+-- lp.slider-nav-wrapper:
+parent-id: qoutes-parent
+
+-- lp.slider-nav:
+$active: true
+index: 1
+
+-- lp.slider-nav:
+index: 2
+
+-- lp.slider-nav:
+index: 3
+
+-- end: lp.slider-nav-wrapper
+
+-- end: lp.qoutes
 
 
 
@@ -174,50 +245,6 @@ cta-label: Button
 
 
 
-
--- lp.footer: Fastn
-list-of-footer-logo: $list-of-footer-logo
-
-Copyright ©2022. Fastn Inc. 
-
--- lp.footer-links-wrapper:
-
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- lp.footer-links: HEADING
-footer-color: $inherited.colors.cta-primary.base
-link1: footer-link1
-link2: footer-link2
-link3: footer-link3
-link4: footer-link4
-link5: footer-link5
-
--- end: lp.footer-links-wrapper
-
--- end: lp.footer
 
 
 -- end: lp.page
