@@ -122,7 +122,6 @@ fontSize: blockquote
 -- lp.sub-section:
 
 -- lp.text: API Reference guide
-color: $inherited.colors.text
 marginTop: 0
 fontSize: sm
 
@@ -172,7 +171,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Test and Live Mode API Keys
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -192,7 +190,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Try Fastn APIs
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -223,7 +220,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Get Started Video
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -281,7 +277,6 @@ maginTop: 0
 -- lp.sub-section:
 
 -- lp.text: Handling errors
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -305,37 +300,31 @@ The Stripe API doesn't support bulk updates. You can work on only one object per
 
 
 -- lp.text: - Unordered lists are displayed with a preceding bullet point.
-color: $inherited.colors.text
 marginTop: 18
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
@@ -374,7 +363,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Expanding Responses
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -405,37 +393,31 @@ image: $assets.files.assets.api2.png
 
 
 -- lp.text: - Unordered lists are displayed with a preceding bullet point.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - Lists can be nested as deeply as needed, and they may alternate between ordered and unordered.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - Lists should align with the font-size, font-weight, and line-height of paragraphs, but are styled with bullets or numbers.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - Lists can have similar children elements as paragraphs to provide emphasis on a certain word or phrase.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - You can switch between an unordered list and ordered list by changing the component variant in the Design panel.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
 
 -- lp.text: - You can remove a list item from the default component by deleting it in the Layers panel.
-color: $inherited.colors.text
 marginTop: 0
 marginLeft: 50
 fontSize: normal
@@ -452,7 +434,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Idempotent Requests
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -481,7 +462,6 @@ The Stripe API doesn't support bulk updates. You can work on only one object per
 -- lp.sub-section:
 
 -- lp.text: Metadata
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -521,7 +501,6 @@ maginTop: 0
 -- lp.sub-section:
 
 -- lp.text: Pagination
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -554,7 +533,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Authentication
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -586,7 +564,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Kittens
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -619,7 +596,6 @@ maginTop: 18
 -- lp.sub-section:
 
 -- lp.text: Errors
-color: $inherited.colors.text
 marginTop: 60
 fontSize: sm
 
@@ -642,7 +618,6 @@ The Stripe API doesn't support bulk updates. You can work on only one object per
 -- end: lp.doc-paragraph
 
 -- end: lp.sub-section
-
 
 
 -- end: lp.col
