@@ -45,10 +45,11 @@ background.solid: $inherited.colors.background.base
 cta-label: $page.cta-label
 
 -- ftd.row:
+if: { page.title != NULL }
 width: fill-container
 spacing: space-between
 padding-horizontal.px: 40
-padding-vertical.px: 50
+padding-vertical.px : 50
 
 -- ftd.row:
 width: fill-container
