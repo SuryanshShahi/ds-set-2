@@ -1,0 +1,146 @@
+-- import: fifthtry.github.io/ds-set-2/assets
+-- import: fastn/processors as pr
+
+
+-- pr.sitemap-data sitemap:
+$processor$: pr.sitemap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- simple-header: BrandName
+links: $sitemap.sections
+
+
+
+
+
+
+
+
+
+
+
+
+-- component simple-header:
+optional caption title:
+optional ftd.image-src logo:
+pr.toc-item list links: 
+integer width: 1440
+
+-- ftd.column: 
+width: fill-container
+background.solid: $inherited.colors.background.base
+
+-- ftd.column:
+width: fill-container
+padding-horizontal.px: 40
+min-height.fixed.px: 112
+align-content: center
+max-width.fixed.px: 1440
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.row:
+align-self: center
+
+-- ftd.image: 
+if: { simple-header.logo != NULL }
+src: $simple-header.logo
+height.fixed.px: 40
+
+-- ftd.text: $simple-header.title
+if: { simple-header.title != NULL }
+role: $inherited.types.heading-small
+color: $inherited.colors.text
+
+-- end: ftd.row
+
+-- ftd.row:
+spacing.fixed.px: 32
+
+-- section-loop: $obj.title
+$loop$: $simple-header.links as $obj
+url: $obj.url
+is-active: $obj.is-active
+
+-- end: ftd.row
+
+
+-- end: ftd.row
+
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+
+-- end: simple-header
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- component section-loop:
+caption title:
+string url:
+boolean is-active:
+
+-- ftd.column:
+
+-- ftd.text: $section-loop.title
+role: $inherited.types.copy-regular
+link: $section-loop.url
+color: $inherited.colors.accent.primary
+color if { section-loop.is-active }: $inherited.colors.text
+role if { section-loop.is-active }: $inherited.types.button-large
+
+-- end: ftd.column
+
+
+-- end: section-loop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
